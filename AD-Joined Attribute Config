@@ -4,11 +4,9 @@
 2. Map AD attributes to Okta profiles
 3. Add attribute to the Advanced Server Access profile template
 4. Map Okta profile attributes to Advanced Server Access profile attributes
-5. Assign users or groups to Advanced Server Access
-6. (optional) Assign project-level attribute overrides
 
-1. **Add attribute to the Okta profile template**
-    1. Directory > Profile Editor > User (default)
+# 1. Add attribute to the Okta profile template
+    a. Directory > Profile Editor > User (default)
         - Add Attribute
         - **Data type:** string array
         - **Display name**: Active Directory Identity
@@ -20,7 +18,7 @@
         - Source priority: Inherit from Okta
         - Save Attribute
         
-    2. Directory > Profile Editor > User (default)
+    b. Directory > Profile Editor > User (default)
         - Add Attribute
         - **Data type**: string array
         - **Display name**: Active Directory Passwordless Identity
@@ -30,22 +28,22 @@
         - Source priority: Inherit from Okta
         - Save Attribute
         
-2. **Map AD Attributes to Okta profiles**
-    1. Directory > Profile Editor > Directories > Select Mappings next to AD
-    2. In the **AD to Okta User Tab**, scroll down to activeDirectoryPasswordlessIdentity and paste in the following expression in the empty box:
+# 2. Map AD Attributes to Okta profiles
+    a. Directory > Profile Editor > Directories > Select Mappings next to AD
+    b. In the AD to Okta User Tab, scroll down to activeDirectoryPasswordlessIdentity and paste in the following expression in the empty box:
     
     `Arrays.add(Arrays.toCsvString({}),appuser.userName)`
-    3. Save Mappings
+    c. Save Mappings
 
-1. **Add attribute to the Advanced Server Access Profile Template**
-    1. Directory > Profile Editor > Select Okta Advanced Server Access User
-    2. Check at the bottom of the Attributes page to see if the following 2 attributes are listed: 
-        1. `activeDirectoryIdentity`
-        2. `activeDirectoryPasswordlessIdentity`
+# 3. Add attribute to the Advanced Server Access Profile Template
+    a. Directory > Profile Editor > Select Okta Advanced Server Access User
+    b. Check at the bottom of the Attributes page to see if the following 2 attributes are listed: 
+       i. `activeDirectoryIdentity`
+      ii. `activeDirectoryPasswordlessIdentity`
         
-2. **Map Okta Profile Attributes to Advanced Server Access Profile Attributes**
-    1. Directory > Profile Editor > Click on **Mappings** next to **Okta Advanced Server Access User**
-    2. Click on the **Okta User to Okta Advanced Server Access** Tab at the top
-    3. Add `user.activeDirectoryIdentity` to the box on the left of activeDirectoryIdentity
-    4. Add `user.activeDirectoryPasswordlessIdentity` to the box on the left of activeDirectoryPasswordlessIdentity
-    5. Save Mappings
+# 4.Map Okta Profile Attributes to Advanced Server Access Profile Attributes
+    a. Directory > Profile Editor > Click on **Mappings** next to **Okta Advanced Server Access User**
+    b. Click on the **Okta User to Okta Advanced Server Access** Tab at the top
+    c. Add `user.activeDirectoryIdentity` to the box on the left of activeDirectoryIdentity
+    d. Add `user.activeDirectoryPasswordlessIdentity` to the box on the left of activeDirectoryPasswordlessIdentity
+    e. Save Mappings
