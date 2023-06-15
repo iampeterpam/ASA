@@ -1,4 +1,4 @@
-#AD-Joined Attributes Config
+# AD-Joined Attributes Config
 
 1. Add attribute to the Okta profile template
 2. Map AD attributes to Okta profiles
