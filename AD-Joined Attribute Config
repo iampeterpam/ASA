@@ -8,10 +8,10 @@
 # 1. Add attribute to the Okta profile template
     a. Directory > Profile Editor > User (default)
         - Add Attribute
-        - **Data type:** string array
-        - **Display name**: Active Directory Identity
-        - **Variable name**: `activeDirectoryIdentity`
-        - **Description**: Comma-separated list of AD accounts available to an Okta user. Users must manually enter a password when using these accounts.
+        - Data type: string array
+        - Display name: Active Directory Identity
+        - Variable name: `activeDirectoryIdentity`
+        - Description: Comma-separated list of AD accounts available to an Okta user. Users must manually enter a password when using these accounts.
         - User Permission: Read-Wriite
         - Save
         - Click on the pencil icon next to this new attribute
@@ -20,10 +20,10 @@
         
     b. Directory > Profile Editor > User (default)
         - Add Attribute
-        - **Data type**: string array
-        - **Display name**: Active Directory Passwordless Identity
-        - **Variable name**: `activeDirectoryPasswordlessIdentity`
-        - **Description**: Comma-separated list of AD accounts available to an Okta user. Users don't need to enter a password when using these accounts.
+        - Data type: string array
+        - Display name: Active Directory Passwordless Identity
+        - Variable name: `activeDirectoryPasswordlessIdentity`
+        - Description: Comma-separated list of AD accounts available to an Okta user. Users don't need to enter a password when using these accounts.
         - User Permission: Read-Wriite
         - Source priority: Inherit from Okta
         - Save Attribute
