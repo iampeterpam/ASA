@@ -44,7 +44,7 @@
       ii. activeDirectoryPasswordlessIdentity
         
 # 4.Map Okta Profile Attributes to Advanced Server Access Profile Attributes
-    a. Directory > Profile Editor > Click on Mappings next to Okta Advanced Server Access User**
+    a. Directory > Profile Editor > Click on Mappings next to Okta Advanced Server Access User
     b. Click on the Okta User to Okta Advanced Server Access Tab at the top
     c. Add user.activeDirectoryIdentity to the box on the left of activeDirectoryIdentity
     d. Add user.activeDirectoryPasswordlessIdentity to the box on the left of activeDirectoryPasswordlessIdentity
